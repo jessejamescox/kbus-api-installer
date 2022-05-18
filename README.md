@@ -1,6 +1,5 @@
 <h1 style="font-weight:normal">
-  &nbsp;WAGO PFC KBUS API Installer v1.0.0 &nbsp;
-  <a href="kbus-daemon gif"><img src=images/daemon-installer.gif></a>
+  &nbsp;WAGO PFC KBUS API Installer v2.0.0 &nbsp;
 </h1>
 
 An open source MQTT driver for WAGO PFC controllers backplane.
@@ -23,7 +22,7 @@ This project is still in beta - please use at your own risk and post any bugs to
 
 Install the driver on your controller. This is done with the following command:
 
-`wget https://github.com/jessejamescox/kbus-api-installer/archive/refs/heads/main.zip && unzip main.zip && sh kbus-daemon-installer-main/installer.sh`
+`wget https://github.com/jessejamescox/kbus-api-installer/archive/refs/heads/main.zip && unzip main.zip && sh kbus-api-installer-main/installer.sh`
 
 # The API
 
@@ -104,20 +103,17 @@ Currently the only supported configurations are deadband for analog inputs, and 
 
 # Requirements
 
-- WAGO PFC with firmware >= 18
+- WAGO PFC with firmware 19
 
 # Development
 
-This project is open source and can be modified. See here for the development repo [kbus-daemon source](https://github.com/jessejamescox/wago-kbus-daemon) for more information.
+This project is open source and can be modified. See here for the development repo [kbus-api source](https://github.com/jessejamescox/wago-kbus-daemon) for more information.
 
 # Changelog
 
-- 8-2-2021
-- Restructured the JSON payload to make it more IoT friendly
-- Added API allows you to tag IO channels and set deadband threshold for analog inputs
-- Removed the integrated mosquitto broker. If this is required you must use Docker to add the broker or connect to external broker
-- Added support for mqtt connection via TLS
-- Added supoprt for AWS IoT Thing shadow topic and message formatting
+- 5-18-2022
+- Updated to firmware 19
+- Added Power Measurement Module
 
 # License
 
