@@ -42,6 +42,10 @@ mv bin/$BIN_FILE /bin/ && chmod +x /bin/$BIN_FILE
 echo "adding config directory and file"
 mkdir $KBUS_CONFIG_DIR && mv kbus-api/$KBUS_CONFIG_FILE $KBUS_CONFIG_DIR
 
+#build the log directory
+echo "adding directory for log files"
+mkdir $KBUS_CONFIG_DIR/logs
+
 #copy the init.d script and link it to the start
 echo "adding init script and startup behavior"
 mv init.d/$INIT_SCRIPT $INIT_DIR && chmod +x $INIT_DIR/$INIT_SCRIPT
@@ -54,4 +58,4 @@ cd /etc/rc.d && ln -s ../init.d/$INIT_SCRIPT S99_kbus-apid
 echo "cleaning up"
 rm -r /root/kbus-api-installer-main
 
-echo "INSTALL COMPLETE - make sure you update the configuration file at /etc/kbus-daemon.conf"
+echo "INSTALL COMPLETE - make sure you update the configuration file at /etc/kbus-api.conf"
