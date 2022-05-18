@@ -5,7 +5,7 @@ EXEC_DIR="kbus-api-installer-main/"
 JSONC_IPK="json-c_0.12.1+20160607_armhf.ipk"
 MOSQT_IPK="mosquitto_2.0.0_armhf.ipk"
 
-BIN_FILE="kbus-daemon"
+BIN_FILE="kbus-api"
 
 KBUS_CONFIG_DIR="/etc/kbus-api"
 KBUS_CONFIG_FILE="kbus-api.cfg"
